@@ -46,5 +46,189 @@ Django là một lựa chọn tuyệt vời khi bạn đang cân nhắc sử d�
 # Cài đặt node thế nào ? ( windows/linux ) -> ưu tiên code trên linux ( wsl2 )
 
 
+- Để download NodeJS bạn cần truy cập vào địa chỉ dưới đây
+https://nodejs.org/en/download/
+
+![1](https://user-images.githubusercontent.com/54676091/92732692-fe995500-f3a0-11ea-981e-e0a39c527a0f.png)
+
+Rồi next cho tới bước cuối
+
+![2](https://user-images.githubusercontent.com/54676091/92732778-1b358d00-f3a1-11ea-821b-9a58ab7cdcf4.png)
+
+- Kiểm tra và cấu hình
+
+kiểm tra lại kết quả cài đặt và cấu hình NodeJS.
+Mở cửa sổ CMD và thực thi các lệnh sau để kiểm tra phiên bản của NodeJS và NPM
+
+- node -v
+ 
+- npm -v
+
+
+.
+
+![3](https://user-images.githubusercontent.com/54676091/92733082-72d3f880-f3a1-11ea-8660-e2b858e9ee67.png)
+
+.
+Sau khi cài đặt xong chúng ta sẽ thực hành bài học đầu tiên "hello-world ( localhost:3000 )"
+
+# 1/ Trước bạn cần tạo một thư mục có tên MyProject, hoặc một tên nào đó mà bạn muốn
+
+
+![1](https://user-images.githubusercontent.com/54676091/92733339-c7777380-f3a1-11ea-9bdf-1e08d72374a1.png)
+
+
+# 2/ Mở cửa sổ CMD và CD tới thư mục mà bạn vừa tạo ra. Sau đó chạy lệnh sau để NPM khởi tạo project cho bạn
+
+- npm init
+
+![4](https://user-images.githubusercontent.com/54676091/92733594-00afe380-f3a2-11ea-981c-c4702256354e.png)
+
+.
+
+nhấn Enter cho tới khi hoàn thành
+
+![7](https://user-images.githubusercontent.com/54676091/92733968-52f10480-f3a2-11ea-92f5-d9c28de65c2a.png)
+
+=> Một tập tin có tên package.json đã được tạo ra trên project của bạn.
+
+![9](https://user-images.githubusercontent.com/54676091/92734071-6bf9b580-f3a2-11ea-9a5a-b20fc745b5fa.png)
+
+
+Có một vài gói (package) thư viện cần thiết cho project của bạn, và bạn cần phải cài đặt nó với sự hỗ trợ của NPM:
+
+
+*Express
+Express.js (Hoặc đơn giản là Express) là một Web Application Framework cho NodeJS. Cung cấp bộ tính năng mạnh mẽ cho các ứng dụng web và mobile.
+*Ejs
+EJS là viết tắt của "Embedded JavaScript templating", đây là một thư viện, được sử dụng để phân tích các tập tin ejs, và tạo ra HTML trả về cho client (Trình duyệt).
+
+# 3/ ta dùng lệnh 
+- npm install express ejs
+
+.
+![10](https://user-images.githubusercontent.com/54676091/92734561-d9a5e180-f3a2-11ea-966c-42508719d2ff.png)
+- Sau khi cài đặt xong, bạn có thể nhìn thấy các thay đổi trên project của bạn:
+
+![11](https://user-images.githubusercontent.com/54676091/92734703-fa6e3700-f3a2-11ea-8a8c-9c96352df2a4.png)
+
+.
+
+# 4/ Tạo cấu trúc cho dự án
+
+
+Bây giờ chúng ta sẽ mở project này bằng một công cụ trực quan hơn, ở đây tôi sử dụng trình soạn thảo Atom
+(https://atom.io/ và tải về)
+
+B1 : mở Atom lên
+- vào File chọn Add Project Folder
+sau đó chọn vào Project đã tạo khi nãy
+
+.
+OK, Project đã được mở trên Atom:
+
+![32](https://user-images.githubusercontent.com/54676091/92736843-d27fd300-f3a4-11ea-9f67-7a585aaa44b5.png)
+
+
+.
+- Trên project tạo 2 thư mục con là public & views:
+public: Là thư mục để chứa tất cả các tập tin mà người dùng có thể truy cập vào được, chẳng hạn image, video,..
+views: Website của bạn sẽ có rất nhiều trang (page), chẳng hạn trang chủ, trang đăng nhập,... Thư mục này là nơi chứa tất cả các trang của bạn.
+
+
+![24](https://user-images.githubusercontent.com/54676091/92737267-2f7b8900-f3a5-11ea-8cdd-1b3db927862e.png)
+
+.
+
+
+Trong thư mục views chúng ta tạo 2 tập tin:
+homePage.ejs
+testPage.ejs
+
+![72](https://user-images.githubusercontent.com/54676091/92737750-9a2cc480-f3a5-11ea-9c05-d84524041741.png)
+
+
+.
+![111](https://user-images.githubusercontent.com/54676091/92737966-bf213780-f3a5-11ea-8726-1c9cf81f6d52.png)
+
+
+.
+Tiếp theo, tạo một file có tên index.js, và nhập vào nội dung cho file này. Đây là file cấu hình cho project của bạn:
+
+
+![222](https://user-images.githubusercontent.com/54676091/92738048-d4966180-f3a5-11ea-829f-f4a2c7ad3b00.png)
+
+
+
+
+nhập vào file index.js
+
+![333](https://user-images.githubusercontent.com/54676091/92738263-fe4f8880-f3a5-11ea-9be6-774c2f19208b.png)
+
+
+
+
+
+![444](https://user-images.githubusercontent.com/54676091/92738423-20490b00-f3a6-11ea-98ab-38ee450afc0f.png)
+
+# 4- Chạy Application Server
+Mở cửa sổ CMD, và CD vào thư mục project của bạn. Và thực hiện lệnh lệnh dưới đây để triển khai (deploy) ứng dụng của bạn.
+
+- node index.js
+
+![555](https://user-images.githubusercontent.com/54676091/92738582-44a4e780-f3a6-11ea-9b5c-797877958f9c.png)
+
+
+- Lệnh ở trên sẽ khởi động Web Application Server, và triển khai ứng dụng của bạn lên Web Server này. Lúc này nó đã sẵn sàng phục vụ yêu cầu gửi đến từ client.
+
+
+![999](https://user-images.githubusercontent.com/54676091/92739634-4b802a00-f3a7-11ea-9d96-c88e521c4d4b.png)
+
+
+Chú ý: Không đóng cửa sổ CMD, vì Application Serser của bạn đang được chạy. Mở trình duyệt và truy cập vào đường dẫn:
+http://localhost:3000/
+http://localhost:3000/test
+
+![000](https://user-images.githubusercontent.com/54676091/92739708-5dfa6380-f3a7-11ea-9d6f-1f98803d8553.png)
+
+
+
+
+Điều gì diễn ra tại Server khi người dùng truy cập địa chỉ ở trên?
+
+![09](https://user-images.githubusercontent.com/54676091/92739769-6ce11600-f3a7-11ea-91c8-a27c5cb1a0e1.png)
+
+
+
+
+
+Kết 
+![777](https://user-images.githubusercontent.com/54676091/92741360-ba11b780-f3a8-11ea-890c-3d0426eb2074.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
