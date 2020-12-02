@@ -1,4 +1,4 @@
-- NodeJS là gì?
+- NodeJS là gì?19851498498
 - Ưu nhược điểm của node so với các ngôn ngữ back end khác (php, django, golang, ...)
 - Cài đặt node thế nào ? ( windows/linux ) -> ưu tiên code trên linux ( wsl2 )
 - Demo nhẹ với hello-world ( localhost:3000 )
